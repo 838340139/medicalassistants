@@ -1,0 +1,33 @@
+spring:
+  # 数据源
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: mpw:tzmZXMvHgyXW7lNmPt6cuWKEh3D4gh8QfEhz8lCk0oc+/1YeosHsnXByonPsof1PhvlEOFKrtEttwoLah5gJjQDaDFzVV0mRO7biE4DLOHcrkUaQX1zNZNXA00NEJuNRw38286a/Pckjvuld3ZZsYqQjqhOinQssfQ41e0SJICj1zx/Pb6+651wjRm+JGjFY7HnptiiKkAVfEzpqFbjJCzxslAPQwnq+MWaH4j6rQoH6PSWHgJ/lDk15hkR/3TtsUMjdRsbpDIXQfkmjDlIw1ZmnEDiMEsirj07xCLu7nNhCUqoDgd3EGApUfyGYLrvSs0GHeD234y1lMEN5j/yOwQ0Jd2SHK2XfgRt7MrwjpTMYP22qOQe0LvzOBJuArjj1jRH+3aAA3VVBdyUk06aSCQ==
+    username: mpw:eAJ9aUebeivRxj0yP/F9tQ==
+    password: mpw:ZEpaIQAee1/v2lHIY7zVPQ==
+    druid:
+      # 连接池的配置信息
+      # 初始化大小，最小，最大
+      initial-size: 5
+      min-idle: 5
+      maxActive: 20
+      # 配置获取连接等待超时的时间
+      maxWait: 60000
+      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      timeBetweenEvictionRunsMillis: 60000
+      # 配置一个连接在池中最小生存的时间，单位是毫秒
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 1 FROM DUAL
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      # 打开PSCache，并且指定每个连接上PSCache的大小
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+
+
+# Logger Config
+logging:
+  level:
+    com.baomidou.mybatisplus.samples.quickstart: debug
