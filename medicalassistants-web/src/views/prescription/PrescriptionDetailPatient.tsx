@@ -93,7 +93,7 @@ export default class RecordDetail extends React.Component<any,IState>{
                 </div>
               );
         const {data}=this.state
-        const Rp=data.medicalAdvice.split(" ")
+        //const Rp=data.medicalAdvice.split(" ")
         return (
             <DocumentTitle title={<IconAndText icon={FileTextTwoTone } text="处方单信息"/>} >
                 <div>
